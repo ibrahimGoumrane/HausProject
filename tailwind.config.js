@@ -9,18 +9,18 @@ export default {
       },
       fontSize: {
         nav: '32px',
-        mainTitle: '64px',
-        secondayTitle: '50px',
-        mainParagraph: '40px',
-        secondaryParagraph: '32px',
+        'title-primary': '64px',
+        'title-secondary': '50px',
+        'paragraph-primary': '40px',
+        'paragraph-secondary': '32px',
       },
       colors: {
         white: {
-          main: '#F3F0E9',
+          primary: '#F3F0E9',
           secondary: '#FFFFFF',
         },
         black: {
-          main: '#292929',
+          primary: '#292929',
           secondary: '#000000',
         },
       },
