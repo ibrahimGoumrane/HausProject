@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}', 'node_modules/preline/dist/*.js'],
   theme: {
     extend: {
       fontFamily: {
@@ -16,8 +16,8 @@ export default {
       },
       colors: {
         white: {
-          main: '#FFFFFF',
-          secondary: '#F3F0E9',
+          main: '#F3F0E9',
+          secondary: '#FFFFFF',
         },
         black: {
           main: '#292929',
@@ -26,5 +26,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require('preline/plugin')],
 };
