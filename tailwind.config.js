@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}', 'node_modules/preline/dist/*.js'],
   theme: {
     extend: {
       fontFamily: {
@@ -9,22 +9,26 @@ export default {
       },
       fontSize: {
         nav: '32px',
-        mainTitle: '64px',
-        secondayTitle: '50px',
-        mainParagraph: '40px',
-        secondaryParagraph: '32px',
+        'title-primary': '64px',
+        'title-secondary': '50px',
+        'paragraph-primary': '40px',
+        'paragraph-secondary': '32px',
+      },
+      borderColor: {
+        'white-primary': '#F3F0E9',
+        'black-primary': '#292929',
       },
       colors: {
         white: {
-          main: '#FFFFFF',
-          secondary: '#F3F0E9',
+          primary: '#F3F0E9',
+          secondary: '#FFFFFF',
         },
         black: {
-          main: '#292929',
+          primary: '#292929',
           secondary: '#000000',
         },
       },
     },
   },
-  plugins: [],
+  plugins: [require('preline/plugin')],
 };
