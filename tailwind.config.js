@@ -14,6 +14,10 @@ export default {
         'paragraph-primary': '40px',
         'paragraph-secondary': '32px',
       },
+      borderColor: {
+        'white-primary': '#F3F0E9',
+        'black-primary': '#292929',
+      },
       colors: {
         white: {
           primary: '#F3F0E9',
