@@ -15,23 +15,25 @@ const blogPosts = [
 
 const Blog = () => {
   return (
-    <div className="py-16 px-6" id="blog">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12">Our blogs</h2>
-        <div className="space-y-8">
-          {blogPosts.map((post, index) => (
-            <div key={index} className="flex gap-8 items-center">
-              <img src={post.image} alt={post.title} className="w-48 h-32 object-cover rounded-lg" />
-              <div>
-                <h3 className="text-xl  font-semibold mb-2">{post.title}</h3>
-                <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                <a href="#" className="text-blue-600 hover:underline">
+    <div className="flex items-start bg-white-primary flex-col justify-start py-5  border-y-[4px] border-black-primary">
+      <div className="px-[40px] pt-[40px] pb-[20px]">
+        <h2 className="text-title-secondary font-bold  text-black-primary">Our blogs</h2>
+      </div>
+      <div className="divide-y-[3px]  divide-black-primary w-full">
+        {blogPosts.map((post, index) => (
+          <div key={index} className="flex gap-8 items-start   px-[40px] py-[20px] ">
+            <img src={post.image} alt={post.title} className="w-[285px] h-[213px] object-cover " />
+            <div>
+              <h3 className="text-paragraph-primary  font-semibold mb-2">{post.title}</h3>
+              <p className="text-black-primary text-paragraph-secondary max-w-6xl mb-4">
+                {post.excerpt}{' '}
+                <a href="#" className="font-bold">
                   read more
                 </a>
-              </div>
+              </p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );
