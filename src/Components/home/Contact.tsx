@@ -1,69 +1,27 @@
+import Input from '../Input';
+import TextArea from '../TextArea';
+
 const Contact = () => {
   return (
-    <div className="py-16 px-6" id="contact">
-      <div className="max-w-2xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12">Contact Us</h2>
-        <form className="space-y-6">
-          <div className="grid grid-cols-2 gap-6">
-            <div>
-              <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">
-                First Name*
-              </label>
-              <input
-                type="text"
-                id="firstName"
-                className="w-full px-4 py-2 border rounded-md"
-              />
-            </div>
-            <div>
-              <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">
-                Last Name*
-              </label>
-              <input
-                type="text"
-                id="lastName"
-                className="w-full px-4 py-2 border rounded-md"
-              />
-            </div>
-          </div>
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-              Email*
-            </label>
-            <input
-              type="email"
-              id="email"
-              className="w-full px-4 py-2 border rounded-md"
-            />
-          </div>
-          <div>
-            <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-              Subject
-            </label>
-            <input
-              type="text"
-              id="subject"
-              className="w-full px-4 py-2 border rounded-md"
-            />
-          </div>
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-              Message*
-            </label>
-            <textarea
-              id="message"
-              rows={4}
-              className="w-full px-4 py-2 border rounded-md"
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-black text-white py-3 rounded-md hover:bg-gray-800"
-          >
-            Send
-          </button>
-        </form>
+    <div className="flex items-start bg-black-primary flex-col justify-start  h-[775px] border-y-[4px] border-black-primary">
+      <div className="px-[40px] py-[20px]">
+        <h2 className="text-title-secondary  text-white-primary">Contact Us</h2>
       </div>
+      <form className="w-[1050px] bg-white-primary p-[32px] self-center">
+        <div className="grid grid-cols-2 grid-rows-4 gap-6 h-[450px]">
+          <Input placeholder="First Name" type="text" />
+          <Input placeholder="Last Name" type="text" />
+          <Input placeholder="email" type="email" className=" col-start-1 col-span-2 " />
+          <Input placeholder="Subject" type="text" className=" col-start-1 col-span-2 " />
+          <TextArea placeholder="Message" className=" col-start-1 col-span-2 " />
+        </div>
+
+        <div className="w-[250px] h-[80px]  border-y-2 bg-black-primary text-white-secondary text-nav relative mx-auto mt-5">
+          <button className="gap-2 flex items-center justify-center w-full h-full">
+            <span>Send</span>
+          </button>
+        </div>
+      </form>
     </div>
   );
 };
