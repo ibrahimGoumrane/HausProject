@@ -17,4 +17,7 @@
     background-color: #1e1e1e; /* Match the dark background */
     border: 1px solid #00aaff; /* Border similar to the stroke color */
   }
+  * {
+    transition: all 0.3s ease-in-out;
+  }
 }

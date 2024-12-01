@@ -1,32 +1,29 @@
-import { Building2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import DropDown from './DropDown';
+import NavItem from './NavItem';
 
 const Navbar = () => {
   return (
-    <nav className="bg-white-main py-6 px-8 flex items-center justify-between border-b border-black-main/10">
+    <nav className="pt-8 pb-2 px-8 flex items-center justify-between border-b-2 border-black-primary">
       <Link to="/" className="flex items-center gap-3">
-        <Building2 className="h-8 w-8 text-black-main" />
-        <span className="text-nav font-HubotSans font-semibold text-black-main">Haus.</span>
+        <span className="text-title-primary font-HubotSans font-bold  text-black-main">Haus.</span>
       </Link>
       <div className="flex items-center gap-8">
-        <Link to="/about" className="text-nav text-black-main hover:text-black-secondary">
-          About Us
-        </Link>
-        <Link to="/blog" className="text-nav text-black-main hover:text-black-secondary">
-          Blog
-        </Link>
-        <Link to="/faq" className="text-nav text-black-main hover:text-black-secondary">
-          FAQ
-        </Link>
-        <Link to="/contact" className="text-nav text-black-main hover:text-black-secondary">
-          Contact Us
-        </Link>
+        <NavItem to="/about" text="About Us" />
+        <NavItem to="/blog" text="Blog" />
+        <NavItem to="/faq" text="FAQ" />
+        <NavItem to="/contact" text="Contact Us" />
       </div>
       <div className="flex items-center gap-6">
-        <select className="px-6 py-3 border-2 border-black-main rounded-md bg-white-secondary text-nav text-black-main">
-          <option>Book</option>
-        </select>
-        <button className="px-6 py-3 text-nav text-black-main hover:text-black-secondary">Login</button>
+        <DropDown
+          options={['Book', 'Cancel']}
+          onClick={(value) => {
+            console.log(value);
+          }}
+        />
+        <button className="w-[150px] h-[75px] gap-2 flex items-center border-2 border-black-primary justify-center   text-black-primary text-nav">
+          <span>Login</span>
+        </button>{' '}
       </div>
     </nav>
   );

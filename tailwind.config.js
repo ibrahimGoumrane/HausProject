@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        HubotSans: ['HubotSans', 'sans-serif'],
+        HubotSans: ['Hubot Sans'],
         PinyonScript: ['Pinyon Script', 'sans-serif'],
       },
       fontSize: {
