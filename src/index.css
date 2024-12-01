@@ -20,4 +20,19 @@
   * {
     transition: all 0.3s ease-in-out;
   }
+  .font-pinyon {
+    font-family: 'Pinyon Script', serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  .hubot-sans {
+    font-family: 'Hubot Sans', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .section {
+    min-height: 720px;
+    width: 100%;
+  }
 }

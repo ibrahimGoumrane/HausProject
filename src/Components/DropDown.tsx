@@ -18,7 +18,7 @@ const DropDown = ({ options, onClick }: DropDownProps) => {
   }
 
   return (
-    <div className="w-[150px] h-[75px]  border-y-2 bg-black-primary text-white-secondary text-nav relative">
+    <div className="w-[150px] h-[75px]  border-y-2 bg-black-primary cursor-pointer text-white-secondary text-nav relative">
       <button className="gap-2 flex items-center justify-center w-full h-full" onClick={toggleOptions}>
         <span>Book</span>
         <ChevronDown className="h-8 w-8" />

@@ -3,7 +3,7 @@ import Navbar from '../Components/Navbar';
 
 const RootLayout = () => {
   return (
-    <div className="min-h-screen bg-white-primary font-HubotSans">
+    <div className="min-h-screen bg-white-primary hubot-sans">
       <Navbar />
       <Outlet />
     </div>

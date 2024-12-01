@@ -11,8 +11,8 @@ export default {
         nav: '32px',
         'title-primary': '64px',
         'title-secondary': '50px',
-        'paragraph-primary': '40px',
-        'paragraph-secondary': '32px',
+        'paragraph-primary': '32px',
+        'paragraph-secondary': '24px',
       },
       borderColor: {
         'white-primary': '#F3F0E9',
