@@ -31,7 +31,7 @@ const Features = () => {
   return (
     <div className="flex items-start justify-start flex-col  h-[610px] border-y-[4px] border-black-primary">
       <div className="p-[40px]">
-        <h2 className="text-title-secondary font-bold mb-8">We prioritize</h2>
+        <h2 className="text-title-secondary  mb-8">We prioritize</h2>
       </div>
       <div className="grid grid-cols-4  mx-auto divide-x-[3px] divide-black-primary flex-1">
         {features.map((feature, index) =>

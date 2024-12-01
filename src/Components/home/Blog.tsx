@@ -17,7 +17,7 @@ const Blog = () => {
   return (
     <div className="flex items-start bg-white-primary flex-col justify-start py-5  border-y-[4px] border-black-primary">
       <div className="px-[40px] pt-[40px] pb-[20px]">
-        <h2 className="text-title-secondary font-bold  text-black-primary">Our blogs</h2>
+        <h2 className="text-title-secondary  text-black-primary">Our blogs</h2>
       </div>
       <div className="divide-y-[3px]  divide-black-primary w-full">
         {blogPosts.map((post, index) => (

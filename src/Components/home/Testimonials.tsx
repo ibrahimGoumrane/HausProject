@@ -24,7 +24,7 @@ const Testimonials = () => {
   return (
     <div className="flex items-start bg-black-primary flex-col justify-between  h-[775px] border-y-[4px] border-black-primary">
       <div className="p-[40px]">
-        <h2 className="text-title-secondary font-bold  text-white-primary">Haus. visitors</h2>
+        <h2 className="text-title-secondary   text-white-primary">Haus. visitors</h2>
       </div>
       <div className="flex-1 w-full flex items-start justify-center   mx-auto">
         <div className="grid grid-cols-3 gap-16 px-8 ">
