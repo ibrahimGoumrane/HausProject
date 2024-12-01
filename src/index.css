@@ -11,12 +11,12 @@
     font-size: 24px; /* Adjust size as needed */
     font-weight: bold; /* Make the text bold */
     color: transparent; /* Make the text fill transparent */
-    -webkit-text-stroke: 1px #00aaff; /* Outer stroke with blue color */
+    -webkit-text-stroke: 1px #ffff; /* Outer stroke with blue color */
     position: relative;
     padding: 5px 10px;
     display: inline-block;
     background-color: #1e1e1e; /* Match the dark background */
-    border: 1px solid #00aaff; /* Border similar to the stroke color */
+    border: 1px solid #ffff; /* Border similar to the stroke color */
   }
   * {
     transition: all 0.3s ease-in-out;
