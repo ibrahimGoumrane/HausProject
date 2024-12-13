@@ -3,13 +3,13 @@ const blogPosts = [
     title: 'The Role of Natural Light and Greenery in Boosting Creativity',
     excerpt:
       "In today's fast-paced work environments, creativity has become an invaluable asset for professionals across all industries. Whether you're brainstorming the next big idea or solving complex problems...",
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
+    image: 'assets/blog.png',
   },
   {
     title: 'The Role of Natural Light and Greenery in Boosting Creativity',
     excerpt:
       "In today's fast-paced work environments, creativity has become an invaluable asset for professionals across all industries. Whether you're brainstorming the next big idea or solving complex problems...",
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
+    image: 'assets/blog.png',
   },
 ];
 

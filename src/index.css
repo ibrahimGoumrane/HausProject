@@ -6,17 +6,20 @@
 @tailwind utilities;
 
 @layer components {
-  .mainStroke {
-    font-family: Arial, sans-serif; /* Use a font similar to your design */
-    font-size: 24px; /* Adjust size as needed */
-    font-weight: bold; /* Make the text bold */
-    color: transparent; /* Make the text fill transparent */
-    -webkit-text-stroke: 1px #ffff; /* Outer stroke with blue color */
-    position: relative;
-    padding: 5px 10px;
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .scroll-content {
     display: inline-block;
-    background-color: #1e1e1e; /* Match the dark background */
-    border: 1px solid #ffff; /* Border similar to the stroke color */
+    animation: scroll 15s linear infinite;
+  }
+  .mainStroke {
+    -webkit-text-stroke: 0.4px white;
   }
   * {
     transition: all 0.3s ease-in-out;

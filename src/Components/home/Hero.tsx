@@ -4,11 +4,7 @@ const Hero = () => {
   return (
     <div className="grid grid-cols-[550px_minmax(890px,1fr)] px-6  section">
       <div className="flex h-full w-full items-center justify-center border-r-[4px] border-black-primary">
-        <img
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
-          alt="Modern office space"
-          className="w-[470px] h-[624px] object-cover"
-        />
+        <img src="assets/hero.png" alt="Modern office space" className="w-[470px] h-[624px] object-cover" />
       </div>
       <div className="flex flex-col justify-center pt-[300px] pl-[40px]">
         <h1 className="text-title-primary  font-medium mb-4 text-black-main">
