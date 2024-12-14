@@ -14,7 +14,7 @@ const Login = () => {
   return (
     <div className="flex h-screen w-full font-HubotSans bg-white">
       {/* Left side with form */}
-      <div className="flex w-1/2 flex-col items-center justify-center  p-8">
+      <div className="flex  flex-grow flex-col items-center justify-center  p-8">
         <div className="w-full max-w-2xl">
 
           {/* Welcome text */}
@@ -106,13 +106,14 @@ const Login = () => {
       </div>
 
       {/* Right side with background image */}
-      <div className="hidden lg:flex w-1/2 h-full">
-      <img 
-        className="w-full h-full object-cover" 
-        src="public/assets/hero.png" 
-        alt="Background"
-    />
-    </div>
+      <div className="hidden lg:flex  h-full">
+  <img 
+    className="w-full h-full object-contain mx-auto" 
+    src="public/assets/hero.png" 
+    alt="Background"
+  />
+</div>
+
     </div>
   );
 };
