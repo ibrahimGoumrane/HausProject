@@ -19,8 +19,8 @@ const Login = () => {
 
           {/* Welcome text */}
           <div className="mb-12">
-            <h2 className="mb-2 font-serif text-7xl italic text-gray-900 font-PinyonScript text-center">Welcome Back</h2>
-            <p className="text-3xl  text-black opacity-50 fon">
+            <h2 className="mb-2 text-7xl italic text-gray-900 font-PinyonScript text-center">Welcome Back</h2>
+            <p className="text-3xl  text-black opacity-50 text-center">
               the faster you fill up, the faster you book your seat
             </p>
           </div>
@@ -107,12 +107,12 @@ const Login = () => {
 
       {/* Right side with background image */}
       <div className="hidden lg:flex w-1/2 h-full">
-  <img 
-    className="w-full h-full object-cover" 
-    src="public/assets/hero.png" 
-    alt="Background"
-/>
-</div>
+      <img 
+        className="w-full h-full object-cover" 
+        src="public/assets/hero.png" 
+        alt="Background"
+    />
+    </div>
     </div>
   );
 };
