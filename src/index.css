@@ -6,15 +6,6 @@
 @tailwind utilities;
 
 @layer components {
-  /* used to offset the fixed navbar */
-  html {
-    scroll-padding-top: 131.09px;
-  }
-
-  body {
-    margin-top: 131.09px;
-  }
-  /* end code */
   @keyframes scroll {
     0% {
       transform: translateX(100%);
