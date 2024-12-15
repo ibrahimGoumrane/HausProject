@@ -29,7 +29,7 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="flex items-start justify-start flex-col  h-[610px] ">
+    <div className="flex items-start justify-start flex-col  h-[610px] " id="features">
       <div className="pt-[40px] pl-[40px]">
         <h2 className="text-title-primary">We prioritize</h2>
       </div>

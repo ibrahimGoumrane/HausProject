@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className="flex items-start justify-between  h-[605px] border-b-[1px] border-black-primary">
+    <div className="flex items-start justify-between  h-[605px] border-b-[1px] border-black-primary" id="about">
       <div className="pt-[40px] pl-[40px]">
         <h2 className="text-title-primary font-bold ">About Haus.</h2>
         <div className="text-paragraph-primary max-w-[700px] ">

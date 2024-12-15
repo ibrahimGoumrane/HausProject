@@ -10,7 +10,7 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <div className="flex flex-col sm:flex-row items-start bg-white-primary justify-center px-12 py-10 border-y-[2px] border-black-primary">
+    <div className="flex flex-col sm:flex-row items-start bg-white-primary justify-center px-12 py-10 border-y-[2px] border-black-primary" id="faq">
       <div className="w-2/6 pb-6">
         <h2 className="text-title-primary text-black-primary font-medium">FAQ</h2>
       </div>

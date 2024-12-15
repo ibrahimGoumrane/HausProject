@@ -15,7 +15,7 @@ const blogPosts = [
 
 const Blog = () => {
   return (
-    <div className="flex items-start bg-white-primary flex-col justify-start py-5  ">
+    <div className="flex items-start bg-white-primary flex-col justify-start py-5  " id="blog">
       <div className="px-[40px] pt-[40px] ">
         <h2 className="text-title-primary font-medium  text-black-primary">Our blogs</h2>
       </div>

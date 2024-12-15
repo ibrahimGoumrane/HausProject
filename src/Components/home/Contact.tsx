@@ -3,7 +3,7 @@ import TextArea from '../TextArea';
 
 const Contact = () => {
   return (
-    <div className="flex items-start bg-black-primary flex-col justify-start  h-[775px] border-y-[4px] border-black-primary">
+    <div className="flex items-start bg-black-primary flex-col justify-start  h-[775px] border-y-[4px] border-black-primary" id='contact'>
       <div className="px-[40px] py-[20px]">
         <h2 className="text-title-primary font-medium  text-white-primary">Contact Us</h2>
       </div>
