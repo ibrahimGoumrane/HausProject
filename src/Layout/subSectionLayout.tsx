@@ -1,14 +1,15 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useIntersection } from '../Hooks/useIntersection';
 
 interface SubSectionProps {
   children: React.ReactNode;
   animationType?: 'top-to-bottom' | 'left-to-right' | 'none' | 'stay';
+  observeOnce?: boolean;
 }
 
-const SubSection = ({ children, animationType = 'top-to-bottom' }: SubSectionProps) => {
+const SubSection = ({ children, animationType = 'top-to-bottom', observeOnce = false }: SubSectionProps) => {
   const ref = useRef<HTMLDivElement>(null);
-  const isVisible = useIntersection({ element: ref, rootMargin: '10px' });
+  const { isVisible, observer } = useIntersection({ element: ref, rootMargin: '10px' });
 
   const getAnimationStyles = () => {
     switch (animationType) {
@@ -32,7 +33,11 @@ const SubSection = ({ children, animationType = 'top-to-bottom' }: SubSectionPro
         return {};
     }
   };
-
+  useEffect(() => {
+    if (observeOnce && isVisible) {
+      observer?.unobserve(ref.current!);
+    }
+  }, [isVisible, observeOnce, observer]);
   return (
     <div
       ref={ref}

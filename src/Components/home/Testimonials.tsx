@@ -28,37 +28,19 @@ const Testimonials = () => {
       </div>
       <div className="flex-1 w-full flex items-start justify-start   mx-auto max-w-[1400px] 2xl:max-w-max  overflow-x-auto">
         <div className="flex items-center justify-center gap-16 px-8  ">
-          {testimonials.map((testimonial) =>
-            testimonial.active ? (
-              <div
-                key={testimonial.name}
-                className="bg-white-primary w-[550px] h-[570px] p-8  shadow-sm text-center flex items-center flex-col  justify-start  "
-              >
-                <div className="w-16 h-16 bg-black-primary rounded-full" />
-                <div>
-                  <h3 className="text-black-secondary text-paragraph-secondary font-semibold">{testimonial.name}</h3>
-                  <p className="text-black-primary text-scroll-text  italic font-light">{testimonial.role}</p>
-                </div>
-                <p className="text-black-primary text-paragraph-secondary leading-relaxed italic">
-                  {testimonial.content}
-                </p>
+          {testimonials.map((testimonial) => (
+            <div
+              key={testimonial.name}
+              className="bg-white-primary text-black-primary group hover:bg-black-primary hover:text-white-primary hover:border-white-primary border-transparent border-[4px] w-[550px] h-[570px] p-8  shadow-sm text-center flex items-center flex-col  justify-start  "
+            >
+              <div className="w-16 h-16 bg-black-primary group-hover:bg-white-primary rounded-full" />
+              <div>
+                <h3 className=" text-paragraph-secondary font-semibold">{testimonial.name}</h3>
+                <p className=" text-scroll-text  italic font-light">{testimonial.role}</p>
               </div>
-            ) : (
-              <div
-                key={testimonial.name}
-                className="border-white-primary border-[4px] w-[550px] h-[570px] p-8  shadow-sm text-center flex items-center flex-col  justify-start  "
-              >
-                <div className="w-16 h-16 bg-white-primary rounded-full" />
-                <div>
-                  <h3 className="text-white-secondary text-paragraph-secondary font-semibold">{testimonial.name}</h3>
-                  <p className="text-white-primary text-scroll-text  italic font-light">{testimonial.role}</p>
-                </div>
-                <p className="text-white-primary text-paragraph-secondary leading-relaxed italic">
-                  {testimonial.content}
-                </p>
-              </div>
-            ),
-          )}
+              <p className=" text-paragraph-secondary leading-relaxed italic">{testimonial.content}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
