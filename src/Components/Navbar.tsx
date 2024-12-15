@@ -21,9 +21,12 @@ const Navbar = () => {
             console.log(value);
           }}
         />
-        <button className="w-[150px] h-[75px] gap-2 flex items-center border-2 border-black-primary justify-center   text-black-primary text-nav">
-          <span>Login</span>
-        </button>{' '}
+        <Link
+      to="/login"
+      className="w-[150px] h-[75px] gap-2 flex items-center border-2 border-black-primary justify-center text-black-primary text-nav"
+    >
+      <span>Login</span>
+    </Link>
       </div>
     </nav>
   );
