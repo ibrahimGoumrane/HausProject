@@ -14,7 +14,7 @@ const Login = () => {
   return (
     <div className="flex h-screen w-full font-HubotSans bg-white">
       {/* Left side with form */}
-      <div className="flex  flex-grow flex-col items-center justify-center  p-8">
+      <div className="flex w-1/2 flex-grow flex-col items-center justify-center  p-8">
         <div className="w-full max-w-2xl">
 
           {/* Welcome text */}
@@ -86,19 +86,20 @@ const Login = () => {
             </div>
 
             {/* Sign in button */}
-            <button
+            <a
+            href='/'
               type="submit"
               className="flex w-full items-center justify-center gap-2 rounded bg-black-primary py-3 px-6 text-xl font-medium text-white-primary"
             >
               Sign in
               <Forward className="h-5 w-5" />
-            </button>
+            </a>
           </form>
 
           {/* Create account link */}
           <p className="mt-8 text-center text-xl text-gray-600">
             Not a member?{' '}
-            <a href="#" className="font-medium text-black underline">
+            <a href="/signup" className="font-medium text-black-secondary underline">
               Create an account
             </a>
           </p>
@@ -108,8 +109,8 @@ const Login = () => {
       {/* Right side with background image */}
       <div className="hidden lg:flex  h-full">
   <img 
-    className="w-full h-full object-contain mx-auto" 
-    src="public/assets/hero.png" 
+    className="w-full h-full mx-auto" 
+    src="public/assets/loginimg.png" 
     alt="Background"
   />
 </div>
