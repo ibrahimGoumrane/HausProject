@@ -30,5 +30,5 @@ export default {
       },
     },
   },
-  plugins: [require('preline/plugin')],
+  plugins: [require('@designbycode/tailwindcss-text-stroke'), require('preline/plugin')],
 };
