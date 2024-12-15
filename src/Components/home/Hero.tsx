@@ -1,9 +1,11 @@
 import { ArrowRight } from 'lucide-react';
+import SvgHero from './SvgHero';
 
 const Hero = () => {
   return (
-    <>
-      <div className="grid grid-cols-[550px_minmax(890px,1fr)] px-6  section ">
+    <div className="relative overflow-hidden">
+      <SvgHero />
+      <div className="grid grid-cols-[550px_minmax(890px,1fr)]  section ">
         <div className="flex h-full w-full items-center justify-center border-r-[2px] border-black-primary">
           <img src="assets/hero.png" alt="Modern office space" className="w-[470px] h-[624px] object-cover" />
         </div>
@@ -25,7 +27,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
