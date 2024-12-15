@@ -7,7 +7,7 @@ interface IntersectionObserverProps {
 
 export const useIntersection = ({ element, rootMargin }: IntersectionObserverProps) => {
   const [isVisible, setState] = useState(false);
-
+  const [observer, setObserver] = useState<IntersectionObserver | null>(null);
   useEffect(() => {
     const current = element?.current;
     const observer = new IntersectionObserver(
@@ -16,6 +16,7 @@ export const useIntersection = ({ element, rootMargin }: IntersectionObserverPro
       },
       { rootMargin },
     );
+    setObserver(observer);
     if (current) {
       observer.observe(current);
     }
@@ -27,5 +28,8 @@ export const useIntersection = ({ element, rootMargin }: IntersectionObserverPro
     };
   }, [element, rootMargin]);
 
-  return isVisible;
+  return {
+    isVisible,
+    observer,
+  };
 };

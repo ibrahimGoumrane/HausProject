@@ -16,18 +16,17 @@ const Home = () => {
       <SubSection animationType="top-to-bottom">
         <About />
       </SubSection>
-
-      <SubSection animationType="left-to-right">
+      <SubSection animationType="left-to-right" observeOnce={true}>
         <Features />
       </SubSection>
-      <SubSection animationType="top-to-bottom">
+      <SubSection animationType="top-to-bottom" observeOnce={true}>
         <Testimonials />
       </SubSection>
-      <SubSection animationType="left-to-right">
+      <SubSection animationType="left-to-right" observeOnce={true}>
         <Blog />
       </SubSection>
       <FAQ />
-      <SubSection animationType="left-to-right">
+      <SubSection animationType="left-to-right" observeOnce={true}>
         <Contact />
       </SubSection>
     </div>

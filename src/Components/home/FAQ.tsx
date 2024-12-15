@@ -10,9 +10,9 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <div className="flex flex-col sm:flex-row items-start bg-white-primary justify-center px-12 py-10 border-y-2 border-black-primary">
+    <div className="flex flex-col sm:flex-row items-start bg-white-primary justify-center px-12 py-10 border-y-[2px] border-black-primary" id="faq">
       <div className="w-2/6 pb-6">
-        <h2 className="text-title-secondary text-black-primary font-medium">FAQ</h2>
+        <h2 className="text-title-primary text-black-primary font-medium">FAQ</h2>
       </div>
       <div className="hs-accordion-group w-full">
         {faqs.map((faq, index) => (
@@ -34,9 +34,9 @@ export default function FAQ() {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path d="M5 12h14"></path>
                 <path d="M12 5v14"></path>
@@ -49,9 +49,9 @@ export default function FAQ() {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path d="M5 12h14"></path>
               </svg>

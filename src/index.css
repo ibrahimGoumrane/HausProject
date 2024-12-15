@@ -6,6 +6,15 @@
 @tailwind utilities;
 
 @layer components {
+  /* used to offset the fixed navbar */
+  html {
+    scroll-padding-top: 131.09px;
+  }
+
+  body {
+    margin-top: 131.09px;
+  }
+  /* end code */
   @keyframes scroll {
     0% {
       transform: translateX(100%);
@@ -33,7 +42,7 @@
     font-family: 'Hubot Sans', sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
   }
   .section {
     min-height: 720px;

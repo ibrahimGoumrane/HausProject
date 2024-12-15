@@ -9,10 +9,12 @@ export default {
       },
       fontSize: {
         nav: '32px',
-        'title-primary': '64px',
-        'title-secondary': '50px',
-        'paragraph-primary': '32px',
-        'paragraph-secondary': '24px',
+        'title-pinyonScript': '72px',
+        'title-primary': '60px',
+        'title-secondary': '48px',
+        'paragraph-primary': '40px',
+        'paragraph-secondary': '32px',
+        'scroll-text': '24px',
       },
       borderColor: {
         'white-primary': '#F3F0E9',
@@ -27,6 +29,9 @@ export default {
           primary: '#292929',
           secondary: '#000000',
         },
+      },
+      screens: {
+        desktop: '1440px',
       },
     },
   },

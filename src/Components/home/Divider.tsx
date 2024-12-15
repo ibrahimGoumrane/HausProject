@@ -17,12 +17,11 @@ const Dvivder = () => {
         {locations.map((location, index) => (
           <div
             key={index}
-            className="flex items-center gap-2    text-paragraph-secondary  border-x-2 border-white-primary px-[32px]  "
+            className="flex items-center gap-2    text-scroll-text  border-x-2 border-white-primary px-[32px]  "
           >
             <div className="relative">
               <p
                 className={'text-nowrap font-semibold  ' + `${index % 2 === 0 ? 'text-black-primary mainStroke' : ''}`}
-                data-text={`${location.loc} - ${location.city}`}
               >
                 {location.loc} - {location.city}
               </p>
