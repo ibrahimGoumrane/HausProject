@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Eye, Forward } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -12,11 +12,10 @@ const Login = () => {
     navigate('/Home');
   };
   return (
-    <div className="flex h-screen w-full font-HubotSans bg-white">
+    <div className="flex h-screen w-full    bg-white">
       {/* Left side with form */}
-      <div className="flex w-1/2 flex-grow flex-col items-center justify-center  p-8">
+      <div className="flex w-1/2 flex-1 flex-col items-center justify-center  p-8">
         <div className="w-full max-w-2xl">
-
           {/* Welcome text */}
           <div className="mb-12">
             <h2 className="mb-2 text-7xl italic text-gray-900 font-PinyonScript text-center">Welcome Back</h2>
@@ -57,7 +56,7 @@ const Login = () => {
             </div>
             <div className="relative">
               <input
-                type={showPassword ? "text" : "password"}
+                type={showPassword ? 'text' : 'password'}
                 placeholder="Password"
                 className="w-full rounded-md border border-gray-300 bg-transparent px-4 py-3 text-gray-900 placeholder-gray-500"
                 required
@@ -86,35 +85,30 @@ const Login = () => {
             </div>
 
             {/* Sign in button */}
-            <a
-            href='/'
+            <Link
+              to="/"
               type="submit"
               className="flex w-full items-center justify-center gap-2 rounded bg-black-primary py-3 px-6 text-xl font-medium text-white-primary"
             >
               Sign in
               <Forward className="h-5 w-5" />
-            </a>
+            </Link>
           </form>
 
           {/* Create account link */}
           <p className="mt-8 text-center text-xl text-gray-600">
             Not a member?{' '}
-            <a href="/signup" className="font-medium text-black-secondary underline">
+            <Link to="/signup" className="font-medium text-black-secondary ">
               Create an account
-            </a>
+            </Link>
           </p>
         </div>
       </div>
 
       {/* Right side with background image */}
-      <div className="hidden lg:flex  h-full">
-  <img 
-    className="w-full h-full mx-auto" 
-    src="public/assets/loginimg.png" 
-    alt="Background"
-  />
-</div>
-
+      <div className="hidden lg:flex  h-full 2xl:w-auto desktop:w-[800px] w-[500px]  ">
+        <img className="w-full h-full mx-auto" src="public/assets/loginimg.png" alt="Background" />
+      </div>
     </div>
   );
 };
