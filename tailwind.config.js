@@ -30,10 +30,9 @@ export default {
           secondary: '#000000',
         },
       },
-      screens:{
+      screens: {
         desktop: '1440px',
-        
-      }
+      },
     },
   },
   plugins: [require('preline/plugin')],

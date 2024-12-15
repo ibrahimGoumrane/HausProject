@@ -1,6 +1,6 @@
 const SvgHero = () => {
   return (
-    <div className="absolute top-10 right-10  transform rotate-45 ">
+    <div className="absolute top-10 right-10  transform rotate-45  hidden  desktop:block z-40">
       <svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M2.28701 164.548C3.20283 164.268 3.71826 163.299 3.43826 162.383C3.15827 161.467 2.18887 160.952 1.27305 161.232C0.357232 161.512 -0.158203 162.481 0.121793 163.397C0.401788 164.313 1.37119 164.828 2.28701 164.548Z"
