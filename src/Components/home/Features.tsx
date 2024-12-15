@@ -29,7 +29,7 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="flex items-start justify-start flex-col  h-[610px] border-y-[4px] border-black-primary">
+    <div className="flex items-start justify-start flex-col  h-[610px] ">
       <div className="p-[40px]">
         <h2 className="text-title-secondary  mb-8">We prioritize</h2>
       </div>

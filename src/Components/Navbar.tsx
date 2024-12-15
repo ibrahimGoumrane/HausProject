@@ -4,7 +4,7 @@ import NavItem from './NavItem';
 
 const Navbar = () => {
   return (
-    <nav className="pt-8 pb-2 px-8 flex items-center justify-between border-b-[4px] border-black-primary">
+    <nav className="pt-8 pb-2 px-8 flex items-center justify-between border-b-[2px] border-black-primary">
       <Link to="/" className="flex items-center gap-3">
         <span className="text-title-primary font-HubotSans font-bold  text-black-main">Haus.</span>
       </Link>
@@ -22,11 +22,11 @@ const Navbar = () => {
           }}
         />
         <Link
-      to="/login"
-      className="w-[150px] h-[75px] gap-2 flex items-center border-2 border-black-primary justify-center text-black-primary text-nav"
-    >
-      <span>Login</span>
-    </Link>
+          to="/login"
+          className="w-[150px] h-[75px] gap-2 flex items-center border-2 border-black-primary justify-center text-black-primary text-nav"
+        >
+          <span>Login</span>
+        </Link>
       </div>
     </nav>
   );
