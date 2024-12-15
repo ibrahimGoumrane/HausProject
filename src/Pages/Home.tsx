@@ -5,7 +5,6 @@ import FAQ from '../Components/home/FAQ';
 import Features from '../Components/home/Features';
 import Hero from '../Components/home/Hero';
 import Testimonials from '../Components/home/Testimonials';
-import SubSection from '../Layout/subSectionLayout';
 import LocationMarquee from '../Components/home/LocationMarquee';
 import locations from '../Data/locations';
 const Home = () => {
@@ -13,22 +12,12 @@ const Home = () => {
     <div className="min-h-screen bg-white">
       <Hero />
       <LocationMarquee locations={locations} />
-      <SubSection animationType="top-to-bottom">
-        <About />
-      </SubSection>
-      <SubSection animationType="left-to-right" observeOnce={true}>
-        <Features />
-      </SubSection>
-      <SubSection animationType="top-to-bottom" observeOnce={true}>
-        <Testimonials />
-      </SubSection>
-      <SubSection animationType="left-to-right" observeOnce={true}>
-        <Blog />
-      </SubSection>
+      <About />
+      <Features />
+      <Testimonials />
+      <Blog />
       <FAQ />
-      <SubSection animationType="left-to-right" observeOnce={true}>
-        <Contact />
-      </SubSection>
+      <Contact />
     </div>
   );
 };
