@@ -25,9 +25,7 @@ const Home = () => {
       <SubSection animationType="left-to-right">
         <Blog />
       </SubSection>
-      <SubSection animationType="top-to-bottom">
-        <FAQ />
-      </SubSection>
+      <FAQ />
       <SubSection animationType="left-to-right">
         <Contact />
       </SubSection>

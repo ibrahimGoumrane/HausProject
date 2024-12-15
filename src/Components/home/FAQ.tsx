@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 const faqs = [
   { question: 'Can I cancel my membership?', answer: 'Yes, you can cancel your membership at any time.' },
   { question: 'Are there any hidden fees?', answer: 'No, there are no hidden fees. All fees are clearly outlined.' },
@@ -11,37 +9,66 @@ const faqs = [
 ];
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<null | number>(null);
-
-  const handleToggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index); // Toggle the currently open question
-  };
-
   return (
-    <div className="flex items-start bg-white-primary justify-center py-5 h-[550px] border-y-[4px] border-black-primary">
-      <div className="px-[40px] pt-[40px] w-[470px]">
-        <h2 className="text-title-secondary text-black-primary">FAQ</h2>
+    <div className="flex flex-col sm:flex-row items-start bg-white-primary justify-center px-12 py-10 border-y-2 border-black-primary">
+      <div className="w-2/6 pb-6">
+        <h2 className="text-title-secondary text-black-primary font-medium">FAQ</h2>
       </div>
-      <div className="max-w-7xl mx-auto self-center flex-1">
-        <div className="space-y-4 border-b-[4px] border-black-primary">
-          {faqs.map((faq, index) => (
-            <div key={faq.question} className="border-t-[4px] py-4 border-black-primary transition-all min-h-[80px]">
-              <div
-                className="flex items-center justify-between cursor-pointer "
-                onClick={() => handleToggle(index)} // Toggle the dropdown
+      <div className="hs-accordion-group w-full">
+        {faqs.map((faq, index) => (
+          <div
+            key={index}
+            className={`hs-accordion bg-white border-t-2 last:border-b-2 border-black-primary`}
+            id={`accordion-question-${index}`}
+          >
+            <button
+              className="hs-accordion-toggle inline-flex items-center gap-x-3 w-full font-medium text-4xl text-start text-black-primary py-4 px-5  disabled:opacity-50 disabled:pointer-events-none"
+              aria-expanded="false"
+              aria-controls={`hs-basic-bordered-collapse-${index}`}
+            >
+              <svg
+                className="hs-accordion-active:hidden block size-3.5"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               >
-                <p className="text-paragraph-secondary flex items-center gap-x-5">
-                  <span>{openIndex === index ? '-' : '+'}</span> {faq.question}
-                </p>
-              </div>
-              <div className={`transition-all duration-500 ease-in-out overflow-hidden `}>
-                <div className={`${openIndex === index ? 'opacity-100' : 'opacity-0'}`}>
-                  <p className="text-paragraph-secondary">{faq.answer}</p>
-                </div>
+                <path d="M5 12h14"></path>
+                <path d="M12 5v14"></path>
+              </svg>
+              <svg
+                className="hs-accordion-active:block hidden size-3.5"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14"></path>
+              </svg>
+              {faq.question}
+            </button>
+            <div
+              id={`hs-basic-bordered-collapse-${index}`}
+              className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+              role="region"
+              aria-labelledby={`hs-bordered-heading-${index}`}
+            >
+              <div className="pb-4 px-5">
+                <p className="text-black-primary text-3xl">{faq.answer}</p>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );
