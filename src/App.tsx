@@ -13,14 +13,20 @@ declare global {
     HSStaticMethods: IStaticMethods;
   }
 }
-
-function App() {
+function PrelineInitializer() {
   const location = useLocation();
+
   useEffect(() => {
     window.HSStaticMethods.autoInit();
   }, [location.pathname]);
+
+  return null;
+}
+
+function App() {
   return (
     <BrowserRouter>
+      <PrelineInitializer />
       <Routes>
         <Route path="/" element={<RootLayout />}>
           <Route index element={<Home />} />
