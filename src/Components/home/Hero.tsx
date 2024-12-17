@@ -18,7 +18,7 @@ const Hero = () => {
             <h1 className="xl:text-title-primary lg:text-title-secondary text-title-primary  font-semibold text-black-main">
               The place where we{' '}
               <span className="font-pinyon xl:text-title-pinyonScript text-title-pinyonScript lg:text-title-secondary font-medium">
-                grow
+                Grow
               </span>
             </h1>
             <p className="xl:text-paragraph-primary text-paragraph-primary lg:text-paragraph-secondary  mb-2 text-black-main font-normal">

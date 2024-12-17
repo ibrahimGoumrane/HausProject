@@ -31,16 +31,15 @@ const Features = () => {
   return (
     <div className="flex items-start justify-start flex-col  h-[610px] " id="features">
       <div className="pt-[40px] pl-[40px]">
-        <h2 className="text-title-primary">We prioritize</h2>
+        <h2 className="text-title-primary font-medium">We prioritize</h2>
       </div>
-      <div className="grid grid-cols-4  mx-auto divide-x-[3px] divide-black-primary flex-1">
+      <div className="grid grid-cols-4  mx-auto divide-x-[2px] divide-black-primary flex-1">
         {features.map((feature, index) => (
           <div
             key={index}
-            className="p-6 text-black-primary bg-white-primary group hover:bg-black-primary hover:text-white-primary transition-all duration-300 ease-in-out"
+            className="p-6 text-black-primary bg-white-primary group hover:bg-black-primary hover:text-white-primary hover:border-b-2 hover:border-b-white-primary transition-all duration-300 ease-in-out"
           >
-            <feature.icon className="h-12 w-12 mb-2 transition-all duration-100 ease-in-out" />
-            <h3 className="text-title-secondary font-bold pb-5 ">{feature.title}</h3>
+            <h3 className="text-6xl font-semibold pb-5 ">{feature.title}</h3>
             <p className="text-paragraph-primary ">{feature.description}</p>
           </div>
         ))}
