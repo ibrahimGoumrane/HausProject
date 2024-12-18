@@ -6,6 +6,9 @@
 @tailwind utilities;
 
 @layer components {
+  body * {
+    scroll-margin-top: 75px;
+  }
   .mainStroke {
     -webkit-text-stroke: 0.4px white;
   }

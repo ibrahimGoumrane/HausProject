@@ -8,6 +8,7 @@ import { useLocation } from 'react-router-dom';
 import 'preline/preline';
 import { IStaticMethods } from 'preline/preline';
 import { useEffect } from 'react';
+import Booking from './Pages/Booking';
 //reinitializes the components every time when app is mounted or page was changed
 //https://preline.co/docs/frameworks-react.html
 declare global {
@@ -32,10 +33,11 @@ function App() {
       <Routes>
         <Route path="/" element={<RootLayout />}>
           <Route index element={<Home />} />
-          <Route path="*" element={<Error />} />
+          <Route path="book" element={<Booking />} />
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );
