@@ -10,7 +10,7 @@ const Contact = () => {
       <div className="px-[40px] py-[20px]">
         <h2 className="desktop:text-title-primary text-title-secondary  text-white-primary font-bold">Contact Us</h2>
       </div>
-      <form className="desktop:w-[1050px] w-screen md:w-auto lg:w-[900px] bg-white-primary p-[32px] h-auto md:h-[500px] flex flex-col items-stretch justify-between self-center ">
+      <form className="desktop:w-[1050px] w-screen md:w-auto lg:w-[900px] bg-white-primary p-[32px] h-auto md:h-[600px] flex flex-col items-stretch justify-between self-center ">
         <div className="grid md:grid-cols-2 md:grid-rows-4 grid-cols-1 grid-rows-5  gap-5 flex-1 max-h-[500px] sm:max-h-[400px] mb-14 text-paragraph-secondary">
           <Input placeholder="First Name" type="text" className=" col-start-1 col-span-2 md:col-span-1" />
           <Input placeholder="Last Name" type="text" />

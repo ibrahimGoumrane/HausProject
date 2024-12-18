@@ -6,18 +6,6 @@
 @tailwind utilities;
 
 @layer components {
-  @keyframes scroll {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  .scroll-content {
-    display: inline-block;
-    animation: scroll 15s linear infinite;
-  }
   .mainStroke {
     -webkit-text-stroke: 0.4px white;
   }

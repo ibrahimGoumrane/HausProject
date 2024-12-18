@@ -1,4 +1,4 @@
-const Dvivder = () => {
+const Divider = () => {
   const locations = [
     { loc: 'Maarif', city: 'Casablanca' },
     { loc: 'Hay Riad', city: 'Rabat' },
@@ -11,18 +11,17 @@ const Dvivder = () => {
     { loc: 'Mimosas', city: 'Kenitra' },
     { loc: 'Mhannech', city: 'Tetouan' },
   ];
+
   return (
-    <div className="h-[66px]  overflow-x-hidden bg-black-primary flex items-center justify-center px-6  w-full ">
-      <div className="flex items-center scroll-content  justify-center  text-white-primary">
+    <div className="h-[66px] bg-black-primary flex items-center justify-center w-full scroll-container">
+      <div className="flex items-center scroll-content text-white-primary">
         {locations.map((location, index) => (
           <div
             key={index}
-            className="flex items-center gap-2    text-scroll-text  border-x-2 border-white-primary px-[32px]  "
+            className="flex items-center gap-2 text-scroll-text border-x-2 border-white-primary px-[32px]"
           >
             <div className="relative">
-              <p
-                className={'text-nowrap font-semibold  ' + `${index % 2 === 0 ? 'text-black-primary mainStroke' : ''}`}
-              >
+              <p className={'text-nowrap font-semibold ' + `${index % 2 === 0 ? 'text-black-primary mainStroke' : ''}`}>
                 {location.loc} - {location.city}
               </p>
             </div>
@@ -33,4 +32,4 @@ const Dvivder = () => {
   );
 };
 
-export default Dvivder;
+export default Divider;

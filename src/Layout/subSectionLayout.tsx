@@ -43,7 +43,7 @@ const SubSection = ({ children, animationType = 'top-to-bottom', observeOnce = f
       ref={ref}
       style={{
         ...getAnimationStyles(),
-        transition: animationType !== 'none' ? 'transform 1.5s ease-out, opacity 1.5s ease-out' : 'none',
+        transition: animationType !== 'none' ? 'transform 1s ease-out, opacity 1s ease-out' : 'none',
       }}
     >
       {children}
