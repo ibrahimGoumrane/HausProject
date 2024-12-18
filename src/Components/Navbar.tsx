@@ -4,9 +4,9 @@ import NavItem from './NavItem';
 export default function Navbar() {
   return (
     // <!-- ========== HEADER ========== -->
-    <header className="sticky top-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full border-b-2 border-black-primary bg-white-primary">
-      <nav className="relative  w-full flex flex-wrap md:grid md:grid-cols-12 basis-full items-center px-8 py-2 mx-auto">
-        <div className="md:col-span-3">
+    <header className="sticky top-0 flex flex-wrap lg:justify-start lg:flex-nowrap z-50 w-full border-b-2 border-black-primary bg-white-primary">
+      <nav className="relative  w-full flex flex-wrap lg:grid lg:grid-cols-12 basis-full items-center px-8 py-2 mx-auto">
+        <div className="lg:col-span-3">
           {/* <!-- Logo --> */}
           <Link to="/" className="flex items-center gap-3">
             <span className="text-title-primary font-HubotSans font-bold text-black-main">Haus.</span>
@@ -15,7 +15,7 @@ export default function Navbar() {
         </div>
 
         {/* <!-- Button Group --> */}
-        <div className="flex items-center gap-x-2 md:gap-x-4 ms-auto  md:order-3 md:col-span-3">
+        <div className="flex items-center gap-x-2 lg:gap-x-4 ms-auto  lg:order-3 lg:col-span-3">
           {/* Drop Down */}
           <div className="hs-dropdown relative inline-flex">
             <button
@@ -73,7 +73,7 @@ export default function Navbar() {
             <span>Login</span>
           </Link>
 
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               type="button"
               className="hs-collapse-toggle size-10 flex justify-center items-center text-black-primary disabled:opacity-50 disabled:pointer-events-none"
@@ -122,10 +122,10 @@ export default function Navbar() {
         {/* <!-- Collapse --> */}
         <div
           id="hs-navbar-hcail"
-          className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block md:w-auto md:basis-auto md:order-2 md:col-span-6"
+          className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow lg:block lg:w-auto lg:basis-auto lg:order-2 lg:col-span-6"
           aria-labelledby="hs-navbar-hcail-collapse"
         >
-          <div className="flex flex-col gap-y-10 gap-x-0 mt-5 md:flex-row md:justify-center md:items-center md:gap-y-0 md:gap-x-7 md:mt-0">
+          <div className="flex flex-col gap-y-10 gap-x-0 mt-5 lg:flex-row lg:justify-center lg:items-center lg:gap-y-0 lg:gap-x-7 lg:mt-0">
             <NavItem to="#about" text="About Us" />
             <NavItem to="#blog" text="Blog" />
             <NavItem to="#faq" text="FAQ" />

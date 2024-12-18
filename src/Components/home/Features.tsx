@@ -29,18 +29,20 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="flex items-start justify-start flex-col  h-[610px] " id="features">
-      <div className="pt-[40px] pl-[40px]">
-        <h2 className="text-title-primary font-medium">We prioritize</h2>
+    <div className="flex items-start justify-start flex-col  desktop:h-[610px] h-auto " id="features">
+      <div className="pt-[40px] pl-[40px] desktop:pb-0 pb-[20px]">
+        <h2 className="desktop:text-title-primary text-title-secondary  font-semibold">We prioritize</h2>
       </div>
-      <div className="grid grid-cols-4  mx-auto divide-x-[2px] divide-black-primary flex-1">
+      <div className="grid desktop:grid-cols-4 desktop:grid-rows-1 grid-rows-4 grid-cols-1  mx-auto   flex-1 w-screen desktop:divide-x-[2px] divide-y-[2px] desktop:divide-y-0 divide-black-primary desktop:w-auto">
         {features.map((feature, index) => (
           <div
             key={index}
-            className="p-6 text-black-primary bg-white-primary group hover:bg-black-primary hover:text-white-primary hover:border-b-2 hover:border-b-white-primary transition-all duration-300 ease-in-out"
+            className="p-6 text-black-primary bg-white-primary group hover:bg-black-primary hover:text-white-primary  transition-all duration-300 ease-in-out "
           >
-            <h3 className="text-6xl font-semibold pb-5 ">{feature.title}</h3>
-            <p className="text-paragraph-primary ">{feature.description}</p>
+            <h3 className="desktop:text-title-primary text-title-secondary  desktop:font-semibold font-medium italic  pb-5 ">
+              {feature.title}
+            </h3>
+            <p className="desktop:text-paragraph-primary text-paragraph-secondary ">{feature.description}</p>
           </div>
         ))}
       </div>
