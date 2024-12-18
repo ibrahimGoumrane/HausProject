@@ -5,23 +5,21 @@ const Hero = () => {
   return (
     <div className="relative overflow-hidden">
       <SvgHero />
-      <div className="grid  lg:grid-cols-[1fr_550px] grid-cols-1 xl:grid-cols-[550px_1fr] section relative">
-        <div className="flex h-full w-full items-center justify-center border-l-[2px] xl:border-r-[2px] border-black-primary xl:col-start-1 absolute lg:static inset-0  lg:col-start-2 ">
+      <div className="grid  lg:grid-cols-[1fr_550px] grid-cols-1 xl:grid-cols-[550px_1fr] sm:section relative h-auto ">
+        <div className="sm:flex h-full w-full items-center justify-center  xl:border-r-[2px] border-l-0 border-black-primary xl:col-start-1 absolute lg:static inset-0  lg:col-start-2  hidden">
           <img
             src="assets/hero.png"
             alt="Modern office space"
             className="xl:w-[470px] xl:h-[624px] lg:w-[400px] backdrop-blur-sm lg:backdrop-blur-none object-contain w-full  lg:object-cover"
           />
         </div>
-        <div className="flex items-end lg:items-start  lg:justify-start xl:col-start-2 col-start-1   row-start-1">
-          <div className="flex flex-col gap-5 xl:justify-center xl:pt-[250px] z-10 items-start xl:pl-[40px] pl-[10px] xl:max-w-[750px] lg:max-w-[500px]  max-h-[800px] bg-white-primary p-10 lg:pr-0 rounded-md w-screen     ">
-            <h1 className="xl:text-title-primary lg:text-title-secondary text-title-primary  font-semibold text-black-main">
+        <div className="flex sm:items-end lg:items-start  lg:justify-start xl:col-start-2 col-start-1   row-start-1">
+          <div className="flex flex-col gap-5 xl:justify-center xl:pt-[250px] z-10 items-start xl:pl-[40px] pl-[10px] xl:max-w-[750px] lg:max-w-[500px]  max-h-[800px] bg-white-primary mobile:px-10 lg:pr-0 w-screen     ">
+            <h1 className="xl:text-title-primary text-title-secondary    font-semibold text-black-main">
               The place where we{' '}
-              <span className="font-pinyon xl:text-title-pinyonScript text-title-pinyonScript lg:text-title-secondary font-medium">
-                Grow
-              </span>
+              <span className="font-pinyon xl:text-title-pinyonScript   text-title-secondary font-medium">Grow</span>
             </h1>
-            <p className="xl:text-paragraph-primary text-paragraph-primary lg:text-paragraph-secondary  mb-2 text-black-main font-normal">
+            <p className="xl:text-paragraph-primary mobile:text-paragraph-secondary text-scroll-text  mb-2 text-black-main font-normal">
               Designed to be the pinnacle of productive environments.
               <br /> <span className="font-bold">Haus.</span> spaces combine{' '}
               <span className="font-medium">comfort</span>,<span className="font-medium">functionality</span>, and{' '}

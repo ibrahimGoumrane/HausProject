@@ -22,8 +22,8 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="flex items-start bg-black-primary flex-col justify-between  h-[775px] border-y-[4px] border-black-primary">
-      <div className="p-[40px]">
+    <div className="flex items-start bg-black-primary flex-col justify-between h-auto py-10  md:h-[775px] border-y-[4px] border-black-primary">
+      <div className="md:pl-[40px] pb-4 md:pb-10 pl-0">
         <h2 className="text-title-secondary   text-white-primary">Haus. visitors</h2>
       </div>
       <div className="flex-1 w-full flex items-start justify-start   mx-auto max-w-[1400px] 2xl:max-w-max  overflow-x-auto">
@@ -31,14 +31,20 @@ const Testimonials = () => {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.name}
-              className="bg-white-primary text-black-primary group hover:bg-black-primary hover:text-white-primary hover:border-white-primary border-transparent border-[4px] w-[550px] h-[570px] p-8  shadow-sm text-center flex items-center flex-col  justify-start  "
+              className="bg-white-primary text-black-primary group hover:bg-black-primary hover:text-white-primary hover:border-white-primary border-transparent border-[4px] w-[350px] md:w-[550px]  md:h-[570px] p-8  shadow-sm text-center flex items-center flex-col  justify-start  "
             >
               <div className="w-16 h-16 bg-black-primary group-hover:bg-white-primary rounded-full" />
               <div>
-                <h3 className=" text-paragraph-secondary font-semibold">{testimonial.name}</h3>
-                <p className=" text-scroll-text  italic font-light">{testimonial.role}</p>
+                <h3 className=" md:text-paragraph-secondary mobile:text-scroll-text text-title-mobile font-semibold">
+                  {testimonial.name}
+                </h3>
+                <p className=" md:text-scroll-text mobile:text-title-mobile text-paragraph-mobile  italic font-light">
+                  {testimonial.role}
+                </p>
               </div>
-              <p className=" text-paragraph-secondary leading-relaxed italic">{testimonial.content}</p>
+              <p className=" md:text-paragraph-secondary mobile:text-scroll-text text-paragraph-mobile leading-relaxed italic">
+                {testimonial.content}
+              </p>
             </div>
           ))}
         </div>

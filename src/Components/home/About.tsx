@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div className="relative h-auto md:h-[605px] border-b-[1px] border-black-primary" id="about">
-      <div className="lg:pt-[40px] lg:pl-[40px] pt-[20px] pl-[20px]">
+      <div className="lg:pt-[40px]  pt-[20px] md:pl-[40px]">
         <h2 className="desktop:text-title-primary text-title-secondary  font-bold">About Haus.</h2>
       </div>
       <div className="flex flex-col-reverse  md:block">
@@ -27,7 +27,7 @@ const About = () => {
             className="h-[275px] object-cover absolute w-[50%]  bottom-0 left-0"
           />
         </div>
-        <div className="desktop:text-paragraph-primary  xl:text-paragraph-secondary text-scroll-text   desktop:max-w-[900px] xl:max-w-[600px] lg:max-w-[450px] md:max-w-[350px] w-screen px-[10px]">
+        <div className="desktop:text-paragraph-primary  xl:text-paragraph-secondary mobile:text-scroll-text  text-title-mobile   desktop:max-w-[900px] xl:max-w-[600px] lg:max-w-[450px] md:max-w-[350px] w-screen px-[10px]">
           <p className="mb-6">
             At <span className="font-semibold">Haus</span>, we believe that the right environment is the cornerstone of
             productivity, creativity and personal growth. Our mission is to provide spaces that do more than just

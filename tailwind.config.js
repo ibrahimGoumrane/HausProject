@@ -12,8 +12,10 @@ export default {
         'title-pinyonScript': '72px',
         'title-primary': '60px',
         'title-secondary': '48px',
+        'title-mobile': '20px',
         'paragraph-primary': '40px',
         'paragraph-secondary': '32px',
+        'paragraph-mobile': '16px',
         'scroll-text': '24px',
       },
       borderColor: {
@@ -32,6 +34,7 @@ export default {
       },
       screens: {
         desktop: '1440px',
+        mobile: '400px',
       },
     },
   },

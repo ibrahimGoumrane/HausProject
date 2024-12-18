@@ -10,19 +10,22 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <div className="flex flex-col sm:flex-row items-start bg-white-primary justify-center px-12 py-10 border-y-[2px] border-black-primary" id="faq">
-      <div className="w-2/6 pb-6">
+    <div
+      className="flex flex-col sm:flex-row items-start  bg-white-primary py-5 justify-center  border-y-[2px] border-black-primary"
+      id="faq"
+    >
+      <div className="md:pl-[40px] pl-0">
         <h2 className="text-title-primary text-black-primary font-medium">FAQ</h2>
       </div>
       <div className="hs-accordion-group w-full">
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className={`hs-accordion bg-white border-t-2 last:border-b-2 border-black-primary`}
+            className={`hs-accordion bg-white border-t-2 last:border-b-2 border-black-primary sm:mx-16 mx-0`}
             id={`accordion-question-${index}`}
           >
             <button
-              className="hs-accordion-toggle inline-flex items-center gap-x-3 w-full font-medium text-4xl text-start text-black-primary py-4 px-5  disabled:opacity-50 disabled:pointer-events-none"
+              className="hs-accordion-toggle inline-flex items-center gap-x-3 w-full font-medium xl:text-title-secondary  mobile:text-scroll-text text-title-mobile  text-start text-black-primary py-4 px-5  disabled:opacity-50 disabled:pointer-events-none"
               aria-expanded="false"
               aria-controls={`hs-basic-bordered-collapse-${index}`}
             >
@@ -64,7 +67,9 @@ export default function FAQ() {
               aria-labelledby={`hs-bordered-heading-${index}`}
             >
               <div className="pb-4 px-5">
-                <p className="text-black-primary text-3xl">{faq.answer}</p>
+                <p className="text-black-primary xl:text-paragraph-secondary mobile:text-scroll-text text-text-mobile font-normal ">
+                  {faq.answer}
+                </p>
               </div>
             </div>
           </div>
