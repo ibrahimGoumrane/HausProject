@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Eye, Forward } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -13,14 +12,18 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex h-screen w-full    bg-white">
+    <div className="flex h-screen w-full font-HubotSans bg-white-primary">
       {/* Left side with form */}
       <div className="flex w-1/2 flex-grow flex-col items-center justify-center p-8">
         <div className="w-full max-w-2xl">
           {/* Welcome text */}
           <div className="mb-12">
-            <h2 className="mb-2 text-7xl italic text-gray-900 font-PinyonScript text-center">Get Started Now</h2>
-            <p className="text-3xl text-black opacity-50 text-center">Welcome to Haus. - Let's create your account</p>
+            <h2 className="mb-2 text-7xl italic text-gray-900 font-PinyonScript text-center">
+              Get Started Now
+            </h2>
+            <p className="text-3xl text-black opacity-50 text-center">
+            Welcome to Haus. - Let's create your account 
+            </p>
           </div>
 
           {/* Sign-Up Form */}
@@ -78,7 +81,7 @@ const SignUp = () => {
                 type="button"
                 className={`w-full mr-2 rounded-md border px-4 py-3 text-xl font-medium transition-all ${
                   gender === 'male'
-                    ? 'bg-black-primary text-white-primary border-white-primary'
+                    ? 'bg-black text-white border-gray-900'
                     : 'bg-transparent text-gray-900 border-gray-300'
                 }`}
                 onClick={() => setGender('male')}
@@ -89,7 +92,7 @@ const SignUp = () => {
                 type="button"
                 className={`w-full ml-2 rounded-md border px-4 py-3 text-xl font-medium transition-all ${
                   gender === 'female'
-                    ? 'bg-black-primary text-white-primary border-white-primary'
+                    ? 'bg-black text-white border-gray-900'
                     : 'bg-transparent text-gray-900 border-gray-300'
                 }`}
                 onClick={() => setGender('female')}
@@ -98,29 +101,33 @@ const SignUp = () => {
               </button>
             </div>
             {/* Submit Button */}
-            <Link
-              to="/"
+            <a
+            href='/'
               type="submit"
               className="flex w-full items-center justify-center gap-2 rounded bg-black-primary py-3 px-6 text-xl font-medium text-white-primary"
             >
               Join Us
               <Forward className="h-5 w-5" />
-            </Link>
+            </a>
           </form>
 
           {/* Login link */}
           <p className="mt-8 text-center text-xl text-gray-600">
             Already a member?{' '}
-            <Link to="/login" className="font-medium text-black-secondary ">
+            <a href="/login" className="font-medium text-black-secondary underline">
               Sign in.
-            </Link>
+            </a>
           </p>
         </div>
       </div>
 
       {/* Right side with background image */}
-      <div className="hidden lg:flex  h-full 2xl:w-auto desktop:w-[800px] w-[500px]  ">
-        <img className="w-full h-full mx-auto" src="public/assets/loginimg.png" alt="Background" />
+      <div className="hidden lg:flex h-full">
+        <img
+          className="w-full h-full mx-auto"
+          src="public/assets/loginimg.png"
+          alt="Background"
+        />
       </div>
     </div>
   );
