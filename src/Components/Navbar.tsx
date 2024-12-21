@@ -126,10 +126,10 @@ export default function Navbar() {
           aria-labelledby="hs-navbar-hcail-collapse"
         >
           <div className="flex flex-col gap-y-10 gap-x-0 mt-5 lg:flex-row lg:justify-center lg:items-center lg:gap-y-0 lg:gap-x-7 lg:mt-0">
-            <NavItem to="#about" text="About Us" />
-            <NavItem to="#blog" text="Blog" />
-            <NavItem to="#faq" text="FAQ" />
-            <NavItem to="#contact" text="Contact Us" />
+            <NavItem to="/#about" text="About Us" />
+            <NavItem to="/#blog" text="Blog" />
+            <NavItem to="/#faq" text="FAQ" />
+            <NavItem to="/#contact" text="Contact Us" />
           </div>
         </div>
         {/* <!-- End Collapse --> */}
