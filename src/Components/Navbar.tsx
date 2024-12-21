@@ -50,18 +50,18 @@ export default function Navbar() {
               aria-labelledby="hs-dropdown-slideup-animation"
             >
               <div className=" bg-white-primary border-2 border-black-primary">
-                <a
+                <Link
                   className="text-nav flex items-center  py-2 px-3 text-black-primary hover:bg-black-primary hover:text-white-primary"
-                  href="#"
+                  to="/book?type=hive"
                 >
                   A Hive
-                </a>
-                <a
+                </Link>
+                <Link
                   className="text-nav flex items-center py-2 px-3  text-black-primary hover:bg-black-primary hover:text-white-primary"
-                  href="#"
+                  to="/book?type=room"
                 >
                   A Meeting Room
-                </a>
+                </Link>
               </div>
             </div>
           </div>
