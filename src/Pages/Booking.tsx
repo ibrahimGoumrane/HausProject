@@ -69,17 +69,17 @@ const Booking = () => {
           </button>
           <div
             id="hs-basic-no-arrow-collapse-two"
-            className={`hs-accordion-content w-full overflow-hidden transition-[height] duration-300 ${
+            className={`hs-accordion-content h-full w-full overflow-hidden transition-[height] duration-300 ${
               type === 'room' ? '' : 'hidden'
             }`}
             role="region"
             aria-labelledby="hs-basic-no-arrow-heading-two"
           >
-            <p className="text-gray-800">
-              <em>This is the third item's accordion body.</em> It is hidden by default, until the collapse plugin adds
-              the appropriate classes that we use to style each element. These classes control the overall appearance,
-              as well as the showing and hiding via CSS transitions.
-            </p>
+            <div className="bg-black-primary w-full h-[500px] grid grid-cols-6 grid-rows-4">
+              <div className="col-span-4 row-span-4 bg-red-300"></div>
+              <div className="col-span-2 row-span-2 bg-blue-300"></div>
+              <div className="col-span-2 row-span-2 bg-green-300"></div>
+            </div>
           </div>
         </div>
       </div>
