@@ -17,19 +17,21 @@ const Home = () => {
       <div className="min-h-screen bg-white">
         <Hero />
         <LocationMarquee locations={locations} />
-        <SubSection animationType="top-to-bottom" observeOnce={true}>
+        <SubSection animationType="left-to-right" observeOnce={true}>
           <About />
         </SubSection>
         <SubSection animationType="left-to-right" observeOnce={true}>
           <Features />
         </SubSection>
-        <SubSection animationType="top-to-bottom" observeOnce={true}>
+        <SubSection animationType="left-to-right" observeOnce={true}>
           <Testimonials />
         </SubSection>
         <SubSection animationType="left-to-right" observeOnce={true}>
           <Blog />
         </SubSection>
-        <FAQ />
+        <SubSection animationType="left-to-right" observeOnce={true}>
+          <FAQ />
+        </SubSection>
         <SubSection animationType="left-to-right" observeOnce={true}>
           <Contact />
         </SubSection>
