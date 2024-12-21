@@ -13,8 +13,8 @@ const Hero = () => {
             className="xl:w-[470px] xl:h-[624px] lg:w-[400px] backdrop-blur-sm lg:backdrop-blur-none object-contain w-full  lg:object-cover"
           />
         </div>
-        <div className="flex sm:items-end lg:items-start  lg:justify-start xl:col-start-2 col-start-1   row-start-1">
-          <div className="flex flex-col gap-5 xl:justify-center xl:pt-[250px] z-10 items-start xl:pl-[40px] pl-[10px] xl:max-w-[750px] lg:max-w-[500px]  max-h-[800px] bg-white-primary mobile:px-10 lg:pr-0 w-screen     ">
+        <div className="flex sm:items-end lg:items-start justify-items-end lg:justify-start xl:col-start-2 col-start-1  row-start-1">
+          <div className="flex flex-col gap-5 xl:justify-end z-10 items-start xl:pl-[40px] pl-[10px] xl:pb-10 py-4 xl:max-w-[750px] lg:max-w-[500px]  max-h-[800px] bg-white-primary mobile:px-4 lg:pr-0 w-screen   xl:h-full  ">
             <h1 className="xl:text-title-primary text-title-secondary    font-semibold text-black-main">
               The place where we{' '}
               <span className="font-pinyon xl:text-title-pinyonScript   text-title-secondary font-medium">Grow</span>
