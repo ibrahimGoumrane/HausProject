@@ -1,17 +1,19 @@
 import { useState } from 'react';
 import { AvailableSeats, availableSeats } from '../../Data/locations';
-import AvailableSeatsComponent from './AvailableSeats';
+// import AvailableSeatsComponent from './AvailableSeats';
 import BookingDetails from './BookingDetails';
 import Image360 from './Image360';
 import { locations } from '../../Data/locations';
 import { amenities } from '../../Data/amenities';
+import hiveSpace from '../../Data/hiveSpace';
+import HiveChart from './HiveChart';
 
 const BookingCard = () => {
   const [activeSeatId, setActiveSeatId] = useState<number | null>(null);
   const activeSeat: AvailableSeats | undefined = availableSeats.find((seat) => seat.id === activeSeatId);
-  const onSeatClick = (id: number) => {
-    setActiveSeatId(id);
-  };
+  // const onSeatClick = (id: number) => {
+  //   setActiveSeatId(id);
+  // };
   return (
     <div className="flex flex-col items-center justify-center w-full px-6 pb-6 gap-4">
       <div className="w-full flex gap-4">
@@ -62,7 +64,10 @@ const BookingCard = () => {
         </select>
       </div>
       <div className="flex flex-col md:flex-row gap-6 w-full">
-        <AvailableSeatsComponent handleClick={onSeatClick} activeSeatId={activeSeatId} />
+        {/* <AvailableSeatsComponent handleClick={onSeatClick} activeSeatId={activeSeatId} /> */}
+        <div className="w-full flex justify-center">
+          <HiveChart hiveSpace={hiveSpace} />
+        </div>
         <div className="w-full flex items-center justify-between flex-col md:w-1/3">
           <Image360 activeSeatId={activeSeatId} />
           <BookingDetails activeSeat={activeSeat} />
