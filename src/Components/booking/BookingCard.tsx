@@ -63,12 +63,12 @@ const BookingCard = () => {
           ))}
         </select>
       </div>
-      <div className="flex flex-col md:flex-row gap-6 w-full">
+      <div className="flex flex-col md:flex-row gap-8 w-full">
         {/* <AvailableSeatsComponent handleClick={onSeatClick} activeSeatId={activeSeatId} /> */}
-        <div className="w-full flex justify-center">
+        <div className="w-full flex justify-center border-2 border-black-primary min-w-fit">
           <HiveChart hiveSpace={hiveSpace} />
         </div>
-        <div className="w-full flex items-center justify-between flex-col md:w-1/3">
+        <div className="w-full flex items-center flex-col md:w-1/3 gap-8">
           <Image360 activeSeatId={activeSeatId} />
           <BookingDetails activeSeat={activeSeat} />
         </div>
