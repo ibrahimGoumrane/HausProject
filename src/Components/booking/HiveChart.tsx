@@ -34,6 +34,7 @@ export default function HiveChart({ hiveSpace }: HiveChartProps) {
         width={stageWidth}
         height={stageHeight}
         style={{ cursor: 'grab', maxHeight: '100vh', maxWidth: '100vw', overflow: 'hidden' }}
+        className="cursor-grab max-h-full max-w-full overflow-hidden flex items-center border-2 border-black-primary"
       >
         <Layer draggable={true} dragBoundFunc={dragBoundFunc}>
           {/* Background Image */}

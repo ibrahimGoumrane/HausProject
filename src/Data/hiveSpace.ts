@@ -19,10 +19,10 @@ interface HiveSpace {
 
 const hiveSpace: HiveSpace = {
   id: 1,
-  height: 1104,
-  width: 736,
+  height: 736,
+  width: 909,
   location: 'Hive Space',
-  bgImage: 'assets/hivespace1.png',
+  bgImage: 'assets/hivespace1_cropped.png',
   hives: [
     {
       id: 1,

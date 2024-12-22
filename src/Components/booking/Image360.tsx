@@ -16,7 +16,7 @@ const Image360: React.FC<Image360Props> = ({ activeSeatId }) => {
   console.log(getConfig());
 
   return (
-    <div className="border-[2px] border-black-primary w-[525px] h-[300px] overflow-hidden">
+    <div className="border-[2px] border-black-primary w-full h-full overflow-hidden p-4">
       {activeSeatId ? (
         <ReactPannellum id="1" sceneId="firstScene" imageSource="assets/360Image.jpg" config={config} />
       ) : (

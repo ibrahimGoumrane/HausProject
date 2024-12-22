@@ -7,7 +7,7 @@ interface BookingDetailsProps {
 
 const BookingDetails = ({ activeSeat }: BookingDetailsProps) => {
   return (
-    <div className="flex flex-col relative  border-[2px] border-black-primary w-[525px] h-[362px] p-4">
+    <div className="flex flex-col relative  border-[2px] border-black-primary w-full h-full p-4">
       {activeSeat ? (
         <>
           {' '}
