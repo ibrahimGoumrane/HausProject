@@ -1,14 +1,15 @@
-import { AvailableSeats } from '../../Data/locations';
+import { Hive } from '../../Data/hiveSpace';
+import timeSlots from '../../Data/timeslots';
 import Svg from './Svg';
 
 interface BookingDetailsProps {
-  activeSeat: AvailableSeats | undefined;
+  activeHive: Hive | null;
 }
 
-const BookingDetails = ({ activeSeat }: BookingDetailsProps) => {
+const BookingDetails = ({ activeHive }: BookingDetailsProps) => {
   return (
     <div className="flex flex-col relative  border-[2px] border-black-primary w-full h-full p-4">
-      {activeSeat ? (
+      {activeHive ? (
         <>
           {' '}
           <Svg className="absolute top-0 right-2" />
@@ -16,9 +17,9 @@ const BookingDetails = ({ activeSeat }: BookingDetailsProps) => {
           <div className="flex flex-col">
             <p className="text-scroll-text font-medium ">Amenities</p>
             <ul className="text-scroll-text text-black-primary flex items-center justify-start  font-normal mb-4">
-              {activeSeat?.amenities.map((amenity, index) => (
+              {activeHive?.amenities.map((amenity, index) => (
                 <li key={index}>
-                  {amenity} {index == activeSeat?.amenities.length - 1 || <span className="mx-2">-</span>}{' '}
+                  {amenity} {index == activeHive?.amenities.length - 1 || <span className="mx-2">-</span>}{' '}
                 </li>
               ))}
             </ul>
@@ -26,8 +27,8 @@ const BookingDetails = ({ activeSeat }: BookingDetailsProps) => {
           <div className="flex flex-col">
             <h2 className="text-scroll-text font-medium ">Time Slots</h2>
             <ul className="text-scroll-text text-black-primary flex items-center justify-start divide-x-[2px] border-[2px] divide-black-primary border-black-primary font-normal mb-4">
-              {activeSeat?.timeSlots.map((timeSlot, index) =>
-                activeSeat.reservedTimeSlots.includes(timeSlot) ? (
+              {timeSlots.map((timeSlot, index) =>
+                activeHive.reservedTimeSlots.includes(timeSlot) ? (
                   <li
                     key={index}
                     className="text-scroll-text text-center  p-2 line-through flex-1 text-black-primary/50 "

@@ -5,15 +5,20 @@ import BookingDetails from './BookingDetails';
 import Image360 from './Image360';
 import { locations } from '../../Data/locations';
 import { amenities } from '../../Data/amenities';
-import hiveSpace from '../../Data/hiveSpace';
+import hiveSpace, { Hive } from '../../Data/hiveSpace';
 import HiveChart from './HiveChart';
 
 const BookingCard = () => {
-  const [activeSeatId, setActiveSeatId] = useState<number | null>(null);
-  const activeSeat: AvailableSeats | undefined = availableSeats.find((seat) => seat.id === activeSeatId);
+  const [activeHiveState, setActiveHive] = useState<Hive | null>(null);
   // const onSeatClick = (id: number) => {
   //   setActiveSeatId(id);
   // };
+  const handleHiveSelection = (id: number) => {
+    const hive = hiveSpace.hives.find((hive) => hive.id === id);
+    if (hive) {
+      setActiveHive(hive);
+    }
+  };
   return (
     <div className="flex flex-col items-center justify-center w-full px-6 pb-6 gap-4">
       <div className="w-full flex gap-4">
@@ -65,12 +70,12 @@ const BookingCard = () => {
       </div>
       <div className="flex flex-col xl:flex-row justify-center gap-8 w-full">
         {/* <AvailableSeatsComponent handleClick={onSeatClick} activeSeatId={activeSeatId} /> */}
-        <div className=" flex justify-center min-w-fit">
-          <HiveChart hiveSpace={hiveSpace} />
+        <div className=" flex justify-center w-full max-h-full max-w-full overflow-auto">
+          <HiveChart hiveSpace={hiveSpace} onHiveSelection={handleHiveSelection} />
         </div>
         <div className="w-full flex items-end flex-col xl:w-5/12 gap-8">
-          <Image360 activeSeatId={activeSeatId} />
-          <BookingDetails activeSeat={activeSeat} />
+          <Image360 activeHive={activeHiveState} />
+          <BookingDetails activeHive={activeHiveState} />
         </div>
       </div>
     </div>
