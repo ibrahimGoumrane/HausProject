@@ -9,6 +9,7 @@ import 'preline/preline';
 import { IStaticMethods } from 'preline/preline';
 import { useEffect } from 'react';
 import Booking from './Pages/Booking';
+import Profile from './Pages/Profile';
 //reinitializes the components every time when app is mounted or page was changed
 //https://preline.co/docs/frameworks-react.html
 declare global {
@@ -35,6 +36,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="book" element={<Booking />} />
         </Route>
+        <Route path="/profile" element={<Profile />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="*" element={<Error />} />
