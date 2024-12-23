@@ -56,7 +56,7 @@ const BookingCard = () => {
                       "toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 py-2 px-3 flex gap-x-2 text-nowrap w-full cursor-pointer bg-white text-start text-lg border-2 border-black-primary min-w-[200px]",
                         "dropdownClasses": "border-2 border-black-primary mt-2 z-50 w-full max-h-72 bg-white-primary overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-white-primary [&::-webkit-scrollbar-thumb]:bg-black-primary",
                         "optionClasses": "py-2 px-4 w-full text-lg cursor-pointer",
-                        "optionTemplate": "<div class=\"flex justify-between items-center hs-selected:text-black-primary hs-selected:text-white-primary w-full\"><span data-title></span><span class=\"hidden hs-selected:block\"><svg class=\"shrink-0 size-3.5 \" xmlns=\"http:.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></span></div>"
+                        "optionTemplate": "<div class=\"flex justify-between items-center hs-selected:text-black-primary hs-selected:bg-white-primary w-full\"><span data-title></span><span class=\"hidden hs-selected:block\"><svg class=\"shrink-0 size-3.5 \" xmlns=\"http:.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></span></div>"
                         }'
           className="hidden"
         >
