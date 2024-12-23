@@ -29,18 +29,25 @@ const BookingDetails = ({ activeHive }: BookingDetailsProps) => {
             <ul className="text-scroll-text text-black-primary flex items-center justify-start divide-x-[2px] border-[2px] divide-black-primary border-black-primary font-normal mb-4">
               {timeSlots.map((timeSlot, index) =>
                 activeHive.reservedTimeSlots.includes(timeSlot) ? (
-                  <li
-                    key={index}
-                    className="text-scroll-text text-center  p-2 line-through flex-1 text-black-primary/50 "
-                  >
-                    {timeSlot}
+                  <li key={index} className="flex-1">
+                    <label className="text-scroll-text text-center p-2 line-through text-black-primary/50 block">
+                      {timeSlot}
+                    </label>
                   </li>
                 ) : (
-                  <li
-                    key={index}
-                    className="text-scroll-text text-center p-2 flex-1 hover:bg-black-primary hover:text-white-primary cursor-pointer"
-                  >
-                    {timeSlot}
+                  <li key={index} className="flex-1">
+                    <input
+                      type="checkbox"
+                      id={`timeslot-${index}`}
+                      name={`timeslot-${index}`}
+                      className="hidden peer"
+                    />
+                    <label
+                      htmlFor={`timeslot-${index}`}
+                      className="text-scroll-text text-center p-2 hover:bg-black-primary hover:text-white-primary peer-checked:bg-black-primary peer-checked:text-white-primary cursor-pointer block"
+                    >
+                      {timeSlot}
+                    </label>
                   </li>
                 ),
               )}
