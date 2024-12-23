@@ -101,9 +101,9 @@ const Profile: React.FC<ProfileProps> = ({
   return (
     <>
       <Navbar />
-      <div className="flex w-full min-h-screen bg-white-primary font-HubotSans">
+      <div className="flex flex-col md:flex-row md:w-full min-h-screen bg-white-primary font-HubotSans">
         {/* Left Section - Bookings */}
-        <div className="flex-1 p-10 relative">
+        <div className="md:flex-1 p-10 relative order-2 md:order-1">
           <div className="flex justify-between items-center mb-12">
             <h1 className="text-3xl font-semibold">My Bookings</h1>
             <div className="flex gap-6">
