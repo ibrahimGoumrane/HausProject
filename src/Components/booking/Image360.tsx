@@ -11,7 +11,7 @@ const Image360: React.FC<Image360Props> = ({ activeHive }) => {
   };
 
   return (
-    <div className="border-[2px] border-black-primary w-full h-full overflow-hidden">
+    <div className="border-[2px] border-black-primary w-full  lg:h-full overflow-hidden">
       {activeHive ? (
         <ReactPannellum
           key={activeHive.id}
@@ -22,6 +22,8 @@ const Image360: React.FC<Image360Props> = ({ activeHive }) => {
           style={{
             width: '100%',
             height: '100%',
+            // maxWidth: '380px',
+            minHeight: '380px',
             background: '#FFFFFF',
           }}
         />

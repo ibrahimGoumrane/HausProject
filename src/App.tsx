@@ -22,6 +22,7 @@ function PrelineInitializer() {
 
   useEffect(() => {
     window.HSStaticMethods.autoInit();
+    console.log('10');
   }, [location.pathname]);
 
   return null;

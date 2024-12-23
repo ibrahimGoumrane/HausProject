@@ -208,5 +208,64 @@ const hiveSpace: HiveSpace = {
   ],
 };
 
-export default hiveSpace;
+const meetingRooms: HiveSpace = {
+  id: 1,
+  height: 750,
+  width: 950,
+  location: 'Ghandi - Casablanca',
+  bgImage: 'assets/MettingRoomSpace.jpg',
+  hives: [
+    {
+      id: 1,
+      x: 160,
+      y: 160,
+      name: 'Hive 1',
+      status: 'Available',
+      amenities: ['Adjustable seat', 'Laptop stand'],
+      reservedTimeSlots: ['06:00 - 10:00'],
+      panImage: 'assets/360Image.jpg',
+    },
+    {
+      id: 2,
+      x: 160,
+      y: 400,
+      name: 'Hive 2',
+      status: 'Available',
+      amenities: ['Adjustable seat', 'Charging port'],
+      reservedTimeSlots: ['06:00 - 10:00'],
+      panImage: 'assets/360Image_2.jpg',
+    },
+    {
+      id: 3,
+      x: 160,
+      y: 620,
+      name: 'Hive 3',
+      status: 'Unavailable',
+      amenities: ['Adjustable seat', 'Laptop stand', 'Charging port'],
+      reservedTimeSlots: ['06:00 - 10:00'],
+      panImage: 'assets/360Image_2.jpg',
+    },
+    {
+      id: 4,
+      x: 780,
+      y: 420,
+      name: 'Hive 4',
+      status: 'Available',
+      amenities: ['Adjustable seat', 'Laptop stand'],
+      reservedTimeSlots: ['06:00 - 10:00'],
+      panImage: 'assets/360Image.jpg',
+    },
+    {
+      id: 5,
+      x: 780,
+      y: 610,
+      name: 'Hive 5',
+      status: 'Available',
+      amenities: ['Adjustable seat', 'Laptop stand', 'Charging port'],
+      reservedTimeSlots: ['06:00 - 10:00'],
+      panImage: 'assets/360Image.jpg',
+    },
+  ],
+};
+export { hiveSpace, meetingRooms };
 export type { HiveSpace, Hive };

@@ -1,7 +1,8 @@
+import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import BookingCard from '../Components/booking/BookingCard';
+import BookingMetting from '../Components/booking/BookMetting';
 import Navbar from '../Components/Navbar';
-import { useEffect, useState } from 'react';
 
 const Booking = () => {
   const [searchParams] = useSearchParams();
@@ -9,24 +10,12 @@ const Booking = () => {
 
   useEffect(() => {
     setType(searchParams.get('type'));
+    console.log(11);
   }, [searchParams]);
-  // console.log(searchParam.get('type'));
   return (
-    // <div className="h-screen w-screen flex flex-col items-center justify-center">
-    //   <div>
-    //     <h1 className="xl:text-title-primary text-title-secondary   text-center font-light  ">
-    //       Book a <span className=" font-medium">Hive</span>
-    //     </h1>
-    //     <BookingCard />
-    //   </div>
-    //   <div className="border-t-[2px] border-black-primary mt-8">
-    //     <h1 className="xl:text-title-primary text-title-secondary   text-center font-light  ">
-    //       Book a <span className=" font-medium">Meeting Room</span>
-    //     </h1>
-    //   </div>
-    // </div>
     <div className="h-screen w-screen flex flex-col">
       <Navbar />
+
       <div className="hs-accordion-group h-full overflow-auto ">
         <div
           className={`hs-accordion ${
@@ -38,7 +27,7 @@ const Booking = () => {
             aria-expanded={type === 'hive' || !type}
             aria-controls="hs-basic-no-arrow-collapse-one"
           >
-            <h1 className="xl:text-title-primary text-paragraph-secondary text-center font-light  w-full">
+            <h1 className="xl:text-title-primary text-title-secondary text-center font-light w-full ">
               Book a <span className=" font-medium">Hive</span>
             </h1>
           </button>
@@ -68,18 +57,14 @@ const Booking = () => {
             </h1>
           </button>
           <div
-            id="hs-basic-no-arrow-collapse-two"
-            className={`hs-accordion-content h-full w-full overflow-hidden transition-[height] duration-300 ${
-              type === 'room' ? '' : 'hidden'
+            id="hs-basic-no-arrow-collapse-one"
+            className={`hs-accordion-content w-full overflow-hidden transition-[height] duration-300 ${
+              type === 'hive' || !type ? '' : 'hidden'
             }`}
             role="region"
-            aria-labelledby="hs-basic-no-arrow-heading-two"
+            aria-labelledby="hs-basic-no-arrow-heading-one"
           >
-            <div className="bg-black-primary w-full h-[500px] grid grid-cols-6 grid-rows-4">
-              <div className="col-span-4 row-span-4 bg-red-300"></div>
-              <div className="col-span-2 row-span-2 bg-blue-300"></div>
-              <div className="col-span-2 row-span-2 bg-green-300"></div>
-            </div>
+            <BookingMetting />
           </div>
         </div>
       </div>

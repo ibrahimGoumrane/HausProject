@@ -8,7 +8,7 @@ const ReservedSeat = ({ width = '90', height = '90', className, active }: SvgRes
   return (
     <svg
       width={width}
-      className={className }
+      className={className}
       height={height}
       viewBox="0 0 91 90"
       fill="none"
@@ -35,7 +35,7 @@ const ReservedSeat = ({ width = '90', height = '90', className, active }: SvgRes
             fill-opacity="0.6"
             stroke="#F3F0E9"
             stroke-opacity="0.6"
-            stroke-width="0.133333"
+            strokeWidth="0.133333"
           />
           <path
             d="M39.6257 19.3714L30.5258 10.318C30.0438 9.83857 29.2645 9.84053 28.785 10.3225C28.3056 10.8044 28.3076 11.5838 28.7895 12.0632L37.8895 21.1166C38.3714 21.596 39.1507 21.594 39.6302 21.1121C40.1096 20.6302 40.1076 19.8508 39.6257 19.3714Z"
@@ -43,7 +43,7 @@ const ReservedSeat = ({ width = '90', height = '90', className, active }: SvgRes
             fill-opacity="0.6"
             stroke="#F3F0E9"
             stroke-opacity="0.6"
-            stroke-width="0.133333"
+            strokeWidth="0.133333"
           />
         </g>
       </g>
