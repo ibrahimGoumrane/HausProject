@@ -1,8 +1,11 @@
+import { useTranslation } from 'react-i18next';
+
 const About = () => {
+  const { t } = useTranslation();
   return (
     <div className="relative h-auto md:h-[605px] border-b-[1px] border-black-primary" id="about">
       <div className="lg:pt-[40px]  pt-[20px] md:pl-[40px]">
-        <h2 className="desktop:text-title-primary text-title-secondary  font-bold">About Haus.</h2>
+        <h2 className="desktop:text-title-primary text-title-secondary  font-bold">{t('about')} Haus.</h2>
       </div>
       <div className="flex flex-col-reverse  md:block">
         <div className="relative xl:w-[550px] lg:w-[450px] md:w-[400px]   h-[605px] border-t-[1px] lg:border-t-0 lg:border-l-[1px] border-black-primary md:absolute md:top-0 md:right-0 ">
@@ -29,14 +32,11 @@ const About = () => {
         </div>
         <div className="desktop:text-paragraph-primary  xl:text-paragraph-secondary mobile:text-scroll-text  text-title-mobile   desktop:max-w-[900px] xl:max-w-[600px] lg:max-w-[450px] md:max-w-[350px] w-screen px-[10px]">
           <p className="mb-6">
-            At <span className="font-semibold">Haus</span>, we believe that the right environment is the cornerstone of
-            productivity, creativity and personal growth. Our mission is to provide spaces that do more than just
-            accommodate to work - they inspire it.
+            {t('at')} <span className="font-semibold">Haus</span>, {t('weBelieve')}
           </p>
           <p>
-            Our approach to designing coworking spaces is deeply rooted in{' '}
-            <span className="italic font-normal">scientific research</span> on productivity, ergonomics, and the
-            psychology of workspaces.
+            {t('ourApproach') + ' '}
+            <span className="italic font-normal">{t('scientificResearch')}</span> {t('onProductivity')}
           </p>
         </div>
       </div>
